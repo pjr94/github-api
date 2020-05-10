@@ -103,7 +103,7 @@ function App() {
 
   return (
     // Fragment is a way of grouping elements to return without adding a new node to DOM (like <div> does)
-    <Fragment>
+    <div>
       <form
         className="form"
         onSubmit={event => {
@@ -129,7 +129,7 @@ function App() {
       ) : (
           <UserCard data={data} />
         )}
-    </Fragment>
+    </div>
 
   );
 }
