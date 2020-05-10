@@ -91,7 +91,7 @@ function UserCard({ data }) {
       </div>
 
     </div>
-  )
+  );
 }
 
 function App() {
@@ -100,15 +100,14 @@ function App() {
     'https://api.github.com/users/pjr94',
     { hits: [] },
   );
-
+ // Fragment is a way of grouping elements to return without adding a new node to DOM (like <div> does)
+   
   return (
-    // Fragment is a way of grouping elements to return without adding a new node to DOM (like <div> does)
     <div>
       <form
         className="form"
         onSubmit={event => {
-          // doFetch(`http://hn.algolia.com/api/v1/search?query=${query}`);
-          doFetch(`https://api.github.com/users/${query}`);
+         doFetch(`https://api.github.com/users/${query}`);
           event.preventDefault();
         }}>
         <input
